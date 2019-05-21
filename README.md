@@ -1,6 +1,6 @@
 # Как посмотреть?
 
-- ```npm i```
+- ```npm install```
 - ```npm run check```
 - go to **http://localhost:3000/**
 
