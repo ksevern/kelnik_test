@@ -1,0 +1,274 @@
+include ../mixins/_card.pug
+
+main.layout__main
+  //- Catalog
+  .page
+    section.catalog.j-catalog
+      .page__title
+        h1.heading.heading--1.j-catalog__heading Найдено 23 квартиры
+      .page__content
+        .catalog__sorter
+          .sorter.j-sorter
+            .sorter__title Сортировать по:
+            ul.sorter__list
+              li.sorter__item
+                a.sort-item.sort-item--active.sort-item--down.j-sort-item(data-sort-type="price")
+                  span.sort-item__txt Цене
+                  span.sort-item__shev
+                    svg.sort-item__icon(width="6", height="4")
+                      use(href="static/img/icons.svg#i-shev")
+              li.sorter__item
+                a.sort-item.sort-item--down.j-sort-item(data-sort-type="rooms")
+                  span.sort-item__txt Комнатам
+                  span.sort-item__shev
+                    svg.sort-item__icon(width="6", height="4")
+                      use(href="static/img/icons.svg#i-shev")
+        .catalog__list.j-catalog__list
+          .catalog__item.j-catalog__item
+            +card({
+              id: 100,
+              url: '/flat/100',
+              status: 'booked',
+              price: '1 900 000',
+              rooms: 0,
+              labels: null,
+              back: 'static/img/flats/1.jpg',
+              title: 'Студия №44',
+              finish: `без
+              отделки`,
+              area: 28,
+              floor: '12/14',
+              favourite: true
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 666,
+              url: '/flat/666',
+              status: 'available',
+              price: '1 666 666',
+              rooms: 1,
+              labels: null,
+              back: 'static/img/flats/666.jpg',
+              title: 'Однокомнатная №666',
+              finish: `базовая
+              отделка`,
+              area: 66,
+              floor: '6/6',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 102,
+              url: '/flat/102',
+              status: 'disabled',
+              price: '5 900 000',
+              rooms: 2,
+              labels: null,
+              back: 'static/img/flats/2.jpg',
+              title: 'Двухкомнатная №567',
+              finish: `черновая
+              отделка`,
+              area: 65,
+              floor: '7/14',
+              favourite: true
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 103,
+              url: '/flat/103',
+              status: 'booked',
+              price: '12 900 000',
+              rooms: 3,
+              labels: null,
+              back: 'static/img/flats/3.jpg',
+              title: 'Трехкомнатная №45',
+              finish: `без
+              отделки`,
+              area: 56,
+              floor: '1/14',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 104,
+              url: '/flat/104',
+              status: 'booked',
+              price: '1 900 000',
+              rooms: 0,
+              labels: [
+                {
+                  discount: true,
+                  value: '-17%'
+                },
+                {
+                  value: 'Шок цена!'
+                }
+              ],
+              back: 'static/img/flats/4.jpg',
+              title: 'Студия №25',
+              finish: `черновая
+              отделка`,
+              area: 18,
+              floor: '12/14',
+              favourite: true
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 105,
+              url: '/flat/105',
+              status: 'booked',
+              price: '23 900 000',
+              rooms: 4,
+              labels: [
+                {
+                  discount: true,
+                  value: '-6%'
+                }
+              ],
+              back: 'static/img/flats/5.jpg',
+              title: 'Четырехкомнатная  №259',
+              finish: `черновая
+              отделка`,
+              area: 93,
+              floor: '14/14',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 106,
+              url: '/flat/106',
+              status: 'available',
+              price: '5 666 000',
+              rooms: 1,
+              labels: null,
+              back: 'static/img/flats/6.jpg',
+              title: 'Однокомнатная №56',
+              finish: `без
+              отделки`,
+              area: 36,
+              floor: '3/6',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 107,
+              url: '/flat/107',
+              status: 'available',
+              price: '5 696 664',
+              rooms: 3,
+              labels: null,
+              back: 'static/img/flats/7.jpg',
+              title: 'Трехкомнтаная №46',
+              finish: `черновая
+              отделка`,
+              area: 86,
+              floor: '1/6',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 108,
+              url: '/flat/108',
+              status: 'booked',
+              price: '1 200 000',
+              rooms: 1,
+              labels: [
+                {
+                  discount: true,
+                  value: '-9%', 
+                },
+                {
+                  value: 'Шок цена!'
+                }
+              ],
+              back: 'static/img/flats/8.jpg',
+              title: 'Однокомнатная №2',
+              finish: `без
+              отделки`,
+              area: 18,
+              floor: '3/14',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 109,
+              url: '/flat/109',
+              status: 'booked',
+              price: '1 500 500',
+              rooms: 0,
+              labels: [
+                {
+                  discount: true,
+                  value: '-6%'
+                }
+              ],
+              back: 'static/img/flats/9.jpg',
+              title: 'Студия №12',
+              finish: `черновая
+              отделка`,
+              area: 38,
+              floor: '6/14',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 110,
+              url: '/flat/110',
+              status: 'booked',
+              price: '6 200 000',
+              rooms: 1,
+              labels: null,
+              back: 'static/img/flats/10.jpg',
+              title: 'Однокомнатная №8',
+              finish: `черновая
+              отделка`,
+              area: 48,
+              floor: '3/14',
+              favourite: false
+            })
+          .catalog__item.j-catalog__item
+            +card({
+              id: 111,
+              url: '/flat/111',
+              status: 'booked',
+              price: '5 255 006',
+              rooms: 2,
+              labels: [
+                {
+                  discount: true,
+                  value: '-6%'
+                }
+              ],
+              back: 'static/img/flats/11.jpg',
+              title: 'Двухкомнатная №23',
+              finish: `без
+              отделки`,
+              area: 48,
+              floor: '3/14',
+              favourite: false
+            })
+        button.catalog__btn.j-catalog__btn.btn.btn--secondary(type="button") Показать еще 6
+
+    //- Action block
+    .page__action-block.action-block
+      .action-block__descr
+        h3.action-block__title Успей купить!
+        p.action-block__txt Подпишись и успей словить все&nbsp;акции
+      form.action-block__form
+        .action-block__field
+          .inp.j-inp
+            input.inp__field.j-inp__field(type="text", name="email", placeholder="E-mail")
+          label.checkbox
+            input.checkbox__inp(type="checkbox")
+            span.checkbox__label
+              span.checkbox__sign
+                svg.checkbox__icon(width="12", height="12")
+                  use(href="static/img/icons.svg#i-check")
+              span.checkbox__txt подписаться на&nbsp;новости
+        .action-block__btn
+          button.btn.btn--block Подписаться
+
+//- Up
+button.up-btn.up-btn--hidden.j-up-btn(type="button")
+  svg.up-btn__icon(width="80", height="80")
+    use(href="static/img/icons.svg#i-up")

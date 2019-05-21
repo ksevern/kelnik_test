@@ -1,0 +1,108 @@
+{
+  "total": 23,
+  "next": true,
+  "result": [
+    {
+      "id": 112,
+      "url": "/flat/112",
+      "status": "booked",
+      "price": 2145050,
+      "rooms": 1,
+      "labels": null,
+      "back": "static/img/flats/1.jpg",
+      "title": "Однушка с сервера №1",
+      "finish": "черновая\nотделка",
+      "area": 21,
+      "floor": "3/12",
+      "favourite": false
+    },
+    {
+      "id": 113,
+      "url": "/flat/113",
+      "status": "available",
+      "price": 7100500,
+      "rooms": 2,
+      "labels": [
+        {
+          "discound": true,
+          "value": "-12%"
+        }
+      ],
+      "back": "static/img/flats/3.jpg",
+      "title": "Двухкомнатная №23 с сервера",
+      "finish": "без\nотделки",
+      "area": 57,
+      "floor": "9/12",
+      "favourite": true
+    },
+    {
+      "id": 114,
+      "url": "/flat/114",
+      "status": "available",
+      "price": 12700000,
+      "rooms": 3,
+      "labels": null,
+      "back": "static/img/flats/4.jpg",
+      "title": "Трехкомнтаная №461",
+      "finish": "базовая\nотделка",
+      "area": 90,
+      "floor": "3/6",
+      "favourite": false
+    },
+    {
+      "id": 115,
+      "url": "/flat/115",
+      "status": "booked",
+      "price": 2145050,
+      "rooms": 1,
+      "labels": null,
+      "back": "static/img/flats/5.jpg",
+      "title": "Однокомнатная с сервера №12",
+      "finish": "черновая\nотделка",
+      "area": 21,
+      "floor": "3/12",
+      "favourite": true
+    },
+    {
+      "id": 116,
+      "url": "/flat/116",
+      "status": "disabled",
+      "price": 6100570,
+      "rooms": 2,
+      "labels": [
+        {
+          "discound": true,
+          "value": "-12%"
+        }
+      ],
+      "back": "static/img/flats/6.jpg",
+      "title": "Двухкомнатная №56 с сервера",
+      "finish": "без\nотделки",
+      "area": 57,
+      "floor": "9/12",
+      "favourite": true
+    },
+    {
+      "id": 114,
+      "url": "/flat/114",
+      "status": "booked",
+      "price": 9850700,
+      "rooms": 3,
+      "labels": [
+        {
+          "discount": true,
+          "value": "-17%"
+        },
+        {
+          "value": "Шок цена!"
+        }
+      ],
+      "back": "static/img/flats/4.jpg",
+      "title": "Трехкомнтаная №461",
+      "finish": "базовая\nотделка",
+      "area": 112,
+      "floor": "3/6",
+      "favourite": false
+    }
+  ]
+}

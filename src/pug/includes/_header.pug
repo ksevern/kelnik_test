@@ -1,0 +1,23 @@
+header.header.layout__header
+  .header__container
+    .header__logo
+      a.logo(href="/")
+        svg.logo__img(width="34", height="86")
+          use(href="static/img/icons.svg#logo")
+    .header__menu.menu.j-menu
+      button.menu__toggler.j-menu__toggler(type="button")
+        span
+      .menu__list
+        .menu__inner
+          nav.menu__nav.nav
+            a.nav__item.link(href="#") Объекты
+            a.nav__item.link(href="#") Компания
+            a.nav__item.link(href="#") Как купить
+            a.nav__item.link(href="#") Агентам
+            a.nav__item.link(href="#") Регионам
+            a.nav__item.link(href="#") Акции
+            a.nav__item.link(href="#") Контакты
+          .menu__contact
+            .contact
+              a.contact__phone.link(href="tel:8888888898") 8 888 88 88 98
+              span.contact__label Звони скорее!

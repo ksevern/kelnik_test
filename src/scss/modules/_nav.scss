@@ -1,0 +1,41 @@
+.nav {
+  // media
+  @include media-min($lg-media) {
+    display: flex;
+  }
+}
+
+// Elems 
+.nav {
+  &__item {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    font-size: 1.6rem;
+    line-height: 1;
+    white-space: nowrap;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    // media 
+    @include media-min($lg-media) {
+      margin: 0 24px 0 0;
+      padding: 19px 0;
+      font-size: 1.4rem;
+    }
+
+    @include media-min($xl-media) {
+      margin-right: 28px;
+      padding: 33px 0;
+      font-size: 2rem;
+    }
+
+    @include media-min($xxl-media) {
+      margin-right: 46px;
+      padding: 31px 0;
+      font-size: 2.4rem;
+    }
+  }
+}

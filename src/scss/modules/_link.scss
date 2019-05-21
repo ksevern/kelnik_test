@@ -1,0 +1,12 @@
+.link {
+  transition: color $trans;
+
+  &:hover,
+  &:focus {
+    color: $c-corp;
+  }
+
+  &:active {
+    color: $c-corp-active;
+  }
+}

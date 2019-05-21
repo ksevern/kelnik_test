@@ -1,0 +1,36 @@
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+// Elems
+.layout {
+  &__header {
+    position: fixed;
+    flex: 0 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    // media 
+    @include media-min($lg-media) {
+      position: static;
+    }
+  }
+
+  &__main {
+    flex: 1 1 auto;
+    padding: 65px $xs-gutter 0;
+
+    // media
+    @include media-min($lg-media) {
+      padding-top: 0;
+    }
+
+    @include media-min($xl-media) {
+      padding: 0 $xl-gutter;
+    }
+  }
+}

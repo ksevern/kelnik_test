@@ -1,0 +1,47 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+// Elems
+.contact {
+  &__phone {
+    display: block;
+    padding: 8px 0;
+    font-size: 2.4rem;
+    white-space: nowrap;
+
+    // media
+    @include media-min($lg-media) {
+      padding: 2px 0;
+      font-size: 2.4rem;
+    }
+
+    @include media-min($xl-media) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 1.4rem;
+
+    // media
+    @include media-min($lg-media) {
+      margin-top: 4px;
+      font-size: 1.2rem;
+    }
+
+    @include media-min($xl-media) {
+      margin-top: 8px;
+      font-size: 1.8rem;
+    }
+
+    @include media-min($xxl-media) {
+      margin-top: 6px;
+      font-size: 2rem;
+    }
+  }
+}

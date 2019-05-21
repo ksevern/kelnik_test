@@ -1,0 +1,66 @@
+.checkbox {
+  cursor: pointer;
+  display: block;
+}
+
+// Elems 
+.checkbox {
+  $this: &;
+
+  &__inp {
+    display: none;
+
+    &:checked {
+      ~ #{$this}__label {
+        #{$this}__icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    margin: -4px 0;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 1;
+    user-select: none;
+
+    // media 
+    @include media-min($xl-media) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__txt {
+    display: block;
+    margin-left: 8px;
+    padding: 4px 0 6px;
+
+    // media 
+    @include media-min($xl-media) {
+      padding: 2px 0 6px;
+    }
+  }
+
+  &__sign {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: $c-white;
+    border-radius: 2px;
+  }
+
+  &__icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 3px auto;
+    fill: none;
+    stroke: $c-secondary;
+    stroke-width: 2;
+    opacity: 0;
+    transition: opacity $trans;
+  }
+}

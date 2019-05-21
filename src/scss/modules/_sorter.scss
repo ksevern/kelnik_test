@@ -1,0 +1,23 @@
+.sorter {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgba($c-primary, .7);
+  font-size: 1.4rem;
+  line-height: 1.286;
+}
+
+// Elems 
+.sorter {
+  &__title {
+    margin: 0 10px 10px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 18px 10px 0;
+  }
+}

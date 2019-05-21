@@ -1,0 +1,178 @@
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: box-shadow $trans;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 8px 16px rgba($c-primary, .2);
+  }
+
+  &:active {
+    box-shadow: 0 4px 6px rgba($c-primary, .2);
+  }
+}
+
+// Elems 
+.card {
+  &__fav {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+  }
+
+  &__body {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  &__labels {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 18px;
+    left: 20px;
+    right: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 42px 12.5% 20px;
+
+    // media
+    @include media-min($xl-media) {
+      padding: 38px 16.666666% 20px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 200px;
+    flex: 0 0 auto;
+    margin-bottom: 32px;
+    align-self: center;
+
+    &-inner {
+      width: 100%;
+      padding: 100% 0 0;
+      background: center center no-repeat;
+      background-size: contain;
+    }
+
+    // media
+    @include media-min($lg-media) {
+      max-width: none;
+    }
+  }
+
+  &__title {
+    flex: 1 0 auto;
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+    line-height: 1.25;
+
+    // media
+    @include media-min($xl-media) {
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__params {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+
+    // media
+    @include media-min($xl-media) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 1.8rem;
+
+    // media
+    @include media-min($xl-media) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__status {
+    display: block;
+    flex: 0 0 auto;
+    padding: 13px 16px 11px;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    &:before {
+      display: block;
+    }
+  }
+}
+
+// Mods 
+.card {
+  $this: &;
+
+  &--status {
+    &--available {
+      #{$this} {
+        &__body {
+          box-shadow: inset 0 0 0 1px $c-primary;
+        }
+
+        &__status {
+          background: $c-primary;
+
+          &:before {
+            content: 'Свободно';
+          }
+        }
+      }
+    }
+
+    &--booked {
+
+      #{$this} {
+        &__body {
+          box-shadow: inset 0 0 0 1px $c-corp;
+        }
+
+        &__status {
+          background: $c-corp;
+
+          &:before {
+            content: 'Забронировано';
+          }
+        }
+      }
+    }
+
+    &--disabled {
+      #{$this} {
+        &__body {
+          box-shadow: inset 0 0 0 1px $c-grey;
+        }
+
+        &__status {
+          background: $c-grey;
+
+          &:before {
+            content: 'Продано';
+          }
+        }
+      }
+    }
+  }
+}

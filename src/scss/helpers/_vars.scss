@@ -1,0 +1,25 @@
+// Fonts
+$f-base: 'Open Sans', Arial, Helvetica, sans-serif;
+
+// Colors
+$c-primary: #002f2f;
+$c-corp: #a7a37e;
+$c-corp-light: #efecca;
+$c-corp-hover: lighten($c-corp, 6%);
+$c-corp-active: darken($c-corp, 12%);
+$c-secondary: #046380;
+$c-secondary-hover: lighten($c-secondary, 4%);
+$c-secondary-active: darken($c-secondary, 6%);
+$c-white: #ffffff;
+$c-almost-white: #fefefe;
+$c-grey: #a1a1a1;
+$c-grey-light: #d6d6d6;
+$c-dark: #313639;
+$c-attention: #ff4444;
+$c-interactive: #507392;
+
+// Transitions 
+$trans-time: .2s;
+$trans-func: ease;
+$trans-delay: .1s;
+$trans: $trans-time $trans-func;

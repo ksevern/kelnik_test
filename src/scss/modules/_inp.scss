@@ -1,0 +1,62 @@
+.inp {
+	width: 100%;
+	display: block;
+
+	& + .checkbox {
+		margin-top: 18px;
+	}
+}
+
+// Elems
+.inp {
+	&__field {
+		display: block;
+		width: 100%;
+		padding: 11px 19px 12px;
+		border: none;
+		box-shadow: none;
+		background: $c-white;
+		border-radius: 3px;
+		font-size: 1.8rem;
+		line-height: 1;
+		transition: box-shadow $trans;
+
+		@include placeholder {
+			opacity: 1;
+			color: $c-secondary;
+			transition: opacity $trans;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 1px $c-corp, inset 0 0 0 1px $c-corp;
+
+			@include placeholder {
+				opacity: .5;
+			}
+		}
+	}
+
+	&__message {
+		display: block;
+		margin: 6px 0 0;
+		font-size: 1.2rem;
+		line-height: 1.25;
+	}
+}
+
+// Mods
+.inp {
+	$this: &;
+
+	&--error {
+		#{$this} {
+			&__field {
+				box-shadow: 0 0 0 1px $c-attention, inset 0 0 0 1px $c-attention;
+			}
+
+			&__message {
+				color: $c-attention;
+			}
+		}
+	}
+}

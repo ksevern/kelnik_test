@@ -1,0 +1,90 @@
+.sort-item {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding-right: 26px;
+}
+
+// Elems
+.sort-item {
+  $this: &;
+
+  &__txt {
+    display: block;
+    margin-bottom: -2px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted transparent;
+    white-space: nowrap;
+    transition: $trans;
+    transition-property: color, border;
+  }
+
+  &__shev {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background: rgba($c-secondary, .04);
+    fill: $c-secondary;
+    transition: background $trans;
+  }
+
+  &__icon {
+    display: block;
+    width: 6px;
+    height: 4px;
+    margin: 7px auto;
+    transition: transform $trans;
+  }
+
+  &:hover,
+  &:focus {
+    #{$this} {
+      &__txt {
+        color: $c-primary;
+      }
+
+      &__shev {
+        background: rgba($c-secondary, .09);
+      }
+    }
+  }
+
+  &:active {
+    #{$this} {
+      &__txt {
+        color: $c-primary;
+      }
+
+      &__shev {
+        background: rgba($c-secondary, .14);
+      }
+    }
+  }
+}
+
+// Mods 
+.sort-item {
+  $this: &;
+
+  &--active {
+    #{$this}__txt {
+      color: $c-primary;
+      border-color: rgba($c-interactive, .7);
+    }
+  }
+
+  &--up {
+    #{$this}__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--down {
+    #{$this}__icon {
+      transform: rotate(0);
+    }
+  }
+}

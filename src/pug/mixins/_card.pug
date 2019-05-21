@@ -1,0 +1,25 @@
+mixin card(data)
+  .card(class=`card--status--${data.status}`, data-id=`${data.id}`, data-price=`${data.price}`, data-rooms=`${data.rooms}`)
+    button.card__fav.fav-btn(type="button", class=data.favourite ? "fav-btn--active" : null)
+      svg.fav-btn__icon(width="19", height="18")
+        use(href="static/img/icons.svg#i-star")
+    a.card__body(href=`${data.url}`)
+      .card__labels
+        - if (data.labels) {
+            each label in data.labels
+              span.label(class=label.discount ? 'label--discount' : null)= label.value
+        - }
+      .card__content
+        .card__img
+          .card__img-inner(style=`background-image: url(${data.back})`)
+        h4.heading.card__title #{data.title}
+        ul.card__params.params
+          li.params__item.params__item--accent #{data.finish}
+          li.params__item
+            span.params__value #{data.area} м#[sup 2]
+            span.params__label площадь
+          li.params__item
+            span.params__value #{data.floor}
+            span.params__label этаж
+        .card__price #{data.price} руб.
+      .card__status.btn

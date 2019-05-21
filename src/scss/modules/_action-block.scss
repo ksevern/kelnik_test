@@ -1,0 +1,93 @@
+.action-block {
+  padding: 48px #{2 * 100% / $col} 50px;
+  border-radius: 3px;
+  background: $c-secondary;
+  color: $c-white;
+
+  // media 
+  @include media-min($lg-media) {
+    display: flex;
+    padding: 48px #{100% / $col} 50px;
+  }
+}
+
+// Elems 
+.action-block {
+  &__descr {
+    // media 
+    @include media-min($lg-media) {
+      width: #{9 * 100% / ($col - 2)};
+      margin: 0 #{100% / ($col - 2)} 0 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 1.125;
+
+    // media 
+    @include media-min($xl-media) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__txt {
+    font-size: 1.6rem;
+    line-height: 1.4;
+
+    // media 
+    @include media-min($xl-media) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__form {
+    margin-top: 32px;
+
+    // media
+    @include media-min($md-media) {
+      display: flex;
+    }
+
+    @include media-min($lg-media) {
+      width: #{12 * 100% / ($col - 2)};
+      margin-top: 5px;
+    }
+
+    @include media-min($xl-media) {
+      margin-top: 15px;
+    }
+  }
+
+  &__field {
+    // media 
+    @include media-min($md-media) {
+      width: #{9.5 * 100% / ($col - 4)};
+    }
+
+    @include media-min($lg-media) {
+      width: #{7 * 100% / 12};
+    }
+
+    @include media-min($xl-media) {
+      width: 50%;
+    }
+  }
+
+  &__btn {
+    margin: 28px 0 0;
+
+    // media
+    @include media-min($md-media) {
+      width: #{9.5 * 100% / ($col - 4)};
+      margin: 0 0 0 #{100% / ($col - 4)};
+    }
+
+    @include media-min($lg-media) {
+      width: 33.333333%;
+      margin: 0 0 0 8.333333%;
+    }
+  }
+}

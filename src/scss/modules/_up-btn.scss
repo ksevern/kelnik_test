@@ -1,0 +1,63 @@
+.up-btn {
+  position: fixed;
+  cursor: pointer;
+  display: block;
+  fill: $c-corp;
+  transition: $trans;
+  transition-property: opacity, visibility, fill;
+  box-shadow: 0 0 20px rgba($c-corp-active, .3);
+  border-radius: 100%;
+  bottom: 10px;
+  right: 10px;
+  z-index: 90;
+  background: white;
+
+  &:hover,
+  &:focus {
+    fill: $c-corp-hover;
+  }
+
+  &:active {
+    fill: $c-corp-active;
+  }
+
+  // media
+  @include media-min($md-media) {
+    background: none;
+    box-shadow: none;
+  }
+
+  @include media-min($xl-media) {
+    bottom: #{$xl-content / $col};
+    right: #{$xl-content / $col};
+  }
+
+  @include media-min($xxl-content + $xl-gutter*2) {
+    bottom: #{$xxl-content / $xxl-col};
+    right: 50%;
+    transform: translate(#{$xxl-content / 2}, 0);
+  }
+}
+
+// Elems 
+.up-btn {
+  &__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    // media 
+    @include media-min($xl-media) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+// Mods 
+.up-btn {
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

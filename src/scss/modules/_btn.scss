@@ -1,0 +1,73 @@
+.btn {
+	display: inline-block;
+	padding: 16px 16px 15px;
+	background: $c-corp;
+	border-radius: 3px;
+	font-size: 1.6rem;
+	line-height: 1;
+	letter-spacing: .06em;
+	text-align: center;
+	text-transform: uppercase;
+	color: $c-white;
+	transition: $trans;
+	transition-property: background, color;
+
+	&:hover,
+	&:focus {
+		background: $c-corp-hover;
+	}
+
+	&:active {
+		background: $c-corp-active;
+	}
+}
+
+// Mods 
+.btn {
+	&--secondary {
+		background: $c-secondary;
+
+		&:hover,
+		&:focus {
+			background: $c-secondary-hover;
+		}
+
+		&:active {
+			background: $c-secondary-active;
+		}
+	}
+
+	&--block {
+		display: block;
+		width: 100%;
+	}
+
+	&--loading {
+		position: relative;
+		pointer-events: none;
+		color: transparent;
+
+		&:before {
+			@include pseudo;
+			left: 50%;
+			top: 50%;
+			height: 20px;
+			width: 20px;
+			border: 3px solid $c-white;
+			border-bottom-color: transparent;
+			border-radius: 100%;
+			margin: -10px 0 0 -10px;
+			animation: loading .3s linear infinite;
+		}
+	}
+}
+
+@keyframes loading {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

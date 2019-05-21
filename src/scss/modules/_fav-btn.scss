@@ -1,0 +1,53 @@
+.fav-btn {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  fill: none;
+  stroke: $c-grey-light;
+  transition: $trans;
+  transition-property: fill, stroke, transform;
+
+  &:hover,
+  &:focus {
+    stroke: $c-corp;
+  }
+
+  &:active {
+    fill: $c-corp;
+    stroke: $c-corp;
+    transform: scale(1.2);
+  }
+}
+
+// Elems 
+.fav-btn {
+  &__icon {
+    pointer-events: none;
+    display: block;
+    width: 19px;
+    height: 18px;
+    stroke-width: 80;
+    stroke-miterlimit: 10;
+  }
+}
+
+// Mods 
+.fav-btn {
+  $this: &;
+
+  &--active {
+    fill: $c-corp;
+    stroke: $c-corp;
+
+    &:hover,
+    &:focus {
+      fill: $c-corp-hover;
+      stroke: $c-corp-hover;
+    }
+
+    &:active {
+      fill: $c-corp-active;
+      stroke: $c-corp-active;
+    }
+  }
+}

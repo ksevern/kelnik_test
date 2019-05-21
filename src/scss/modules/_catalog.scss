@@ -1,0 +1,68 @@
+// Elems
+.catalog {
+  &__sorter {
+      margin: 0 0 35px;
+  }
+
+  &__list {
+    &:last-child {
+      margin-bottom: -32px;
+      
+      // media
+      @include media-min($md-media) {
+        margin-bottom: -#{100% / ($col - 4)};
+      }
+    }
+
+    // media 
+    @include media-min($md-media) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    margin-bottom: 32px;
+
+    // media 
+    @include media-min($md-media) {
+      flex: 0 0 #{9.5 * 100% / ($col - 4)};
+      max-width: #{9.5 * 100% / ($col - 4)};
+      margin-bottom: #{100% / ($col - 4)};
+
+      @include media-max($xl-media) {
+        margin-right: #{100% / ($col - 4)};
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @include media-min($xl-media) {
+      flex: 0 0 #{6 * 100% / ($col - 4)};
+      max-width: #{6 * 100% / ($col - 4)};
+      margin-right: #{100% / ($col - 4)};
+      margin-bottom: #{100% / ($col - 4)};
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 29px 30px 30px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: .08em;
+
+    // media 
+    @include media-min($md-media) {
+      max-width: calc(#{$xl-content} * #{1000% / ($col) / 100%});
+    }
+  }
+}

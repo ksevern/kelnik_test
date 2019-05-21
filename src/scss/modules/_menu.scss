@@ -1,0 +1,153 @@
+// Elems 
+.menu {
+  &__toggler {
+    display: block;
+    cursor: pointer;
+    padding: 12px 0;
+
+    // media 
+    @include media-min($lg-media) {
+      display: none;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      background: $c-almost-white;
+      height: 3px;
+      width: 23px;
+      margin: 10px 0;
+      border-radius: 3px;
+      transition: background $trans;
+
+      &:before,
+      &:after {
+        @include pseudo;
+        left: 0;
+        right: 0;
+        height: 100%;
+        border-radius: 3px;
+        background: $c-almost-white;
+        transition: $trans;
+        transition-property: top, bottom, transform, background;
+      }
+
+      &:before {
+        top: -8px;
+      }
+
+      &:after {
+        bottom: -8px;
+      }
+    }
+  }
+
+  &__list {
+    position: fixed;
+    top: 65px;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    background: lighten($c-primary, 2%);
+    transform: none;
+    transition: transform $trans;
+
+    // media
+    @include media-min($sm-media) {
+      max-width: 320px;
+    }
+
+    @include media-min($lg-media) {
+      position: static;
+      width: auto;
+      max-width: none;
+      background: none;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px $xs-gutter 0;
+    opacity: 0;
+    overflow: auto;
+    transition: opacity $trans;
+    
+    // media 
+    @include media-min($lg-media) {
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+
+  &__nav {
+    margin-bottom: auto;
+
+    // media 
+    @include media-min($lg-media) {
+      margin: 0;
+      flex: 1 1 #{17 * 100% / ($col - 2)};
+      max-width: #{17 * 100% / ($col - 2)};
+    }
+
+    @include media-min($xxl-media) {
+      margin: 0;
+      flex: 1 1 #{24 * 100% / ($xxl-col - 3)};
+      max-width: #{24 * 100% / ($xxl-col - 3)};
+    }
+  }
+
+  &__contact {
+    padding: 30px 0;
+
+    // media 
+    @include media-min($lg-media) {
+      padding: 0;
+      width: #{5 * 100% / ($col - 2)};
+    }
+
+    @include media-min($xxl-media) {
+      width: #{5 * 100% / ($xxl-col - 3)};
+    }
+  }
+}
+
+// Mods 
+.menu {
+  $this: &;
+
+  &--opened {
+    #{$this} {
+      &__toggler {
+        span {
+          background: none;
+
+          &:before {
+            top: 0;
+            transform: rotate(45deg);
+          }
+
+          &:after {
+            bottom: 0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      &__list {
+        transform: translate(-100%, 0);
+      }
+
+      &__inner {
+        opacity: 1;
+        transition-delay: $trans-delay;
+      }
+    }
+  }
+}

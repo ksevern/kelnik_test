@@ -1,0 +1,58 @@
+.header {
+  padding: 9px $xs-gutter;
+  background: $c-primary;
+  color: $c-almost-white;
+
+  // media
+  @include media-min($lg-media) {
+    padding: 14px $xs-gutter;
+  }
+
+  @include media-min($xl-media) {
+    padding: 20px $xl-gutter;
+  }
+}
+
+// Elems 
+.header {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: $xs-content;
+    margin: 0 auto;
+
+    // media
+    @include media-min($xxl-media) {
+      max-width: $xxl-content;
+    }
+  }
+
+  &__logo {
+    // media
+    @include media-min($lg-media) {
+      width: #{2 * 100% / $col};
+    }
+
+    @include media-min($xxl-media) {
+      width: #{3 * 100% / $xxl-col};
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+    
+    // media 
+    @include media-min($lg-media) {
+      margin: 0;
+      flex: 1 1 #{22 * 100% / $col};
+      max-width: #{22 * 100% / $col};
+    }
+
+    @include media-min($xxl-media) {
+      flex-basis: #{29 * 100% / $xxl-col};
+      max-width: #{29 * 100% / $xxl-col};
+    }
+  }
+}

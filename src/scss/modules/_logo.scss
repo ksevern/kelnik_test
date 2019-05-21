@@ -1,0 +1,37 @@
+.logo {
+  cursor: pointer;
+  display: block;
+  width: 19px;
+  height: 47px;
+  fill: $c-white;
+  transition: fill $trans;
+
+  &:hover,
+  &:focus {
+    fill: $c-corp;
+  }
+
+  &:active {
+    fill: $c-corp-active;
+  }
+
+  // media
+  @include media-min($xl-media) {
+    width: 21px;
+    height: 52px;
+  }
+
+  @include media-min($xl-media) {
+    width: 34px;
+    height: 86px;
+  }
+}
+
+// Elems 
+.logo {
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

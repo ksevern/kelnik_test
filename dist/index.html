@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Kelnik test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap&amp;subset=cyrillic"/>
+    <link rel="stylesheet" href="static/css/style.min.css"/>
+  </head>
+  <body class="layout">
+    <header class="header layout__header">
+      <div class="header__container">
+        <div class="header__logo"><a class="logo" href="/">
+            <svg class="logo__img" width="34" height="86">
+              <use href="static/img/icons.svg#logo"></use>
+            </svg></a></div>
+        <div class="header__menu menu j-menu">
+          <button class="menu__toggler j-menu__toggler" type="button"><span></span></button>
+          <div class="menu__list">
+            <div class="menu__inner">
+              <nav class="menu__nav nav"><a class="nav__item link" href="#">Объекты</a><a class="nav__item link" href="#">Компания</a><a class="nav__item link" href="#">Как купить</a><a class="nav__item link" href="#">Агентам</a><a class="nav__item link" href="#">Регионам</a><a class="nav__item link" href="#">Акции</a><a class="nav__item link" href="#">Контакты</a></nav>
+              <div class="menu__contact">
+                <div class="contact"><a class="contact__phone link" href="tel:8888888898">8 888 88 88 98</a><span class="contact__label">Звони скорее!</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="layout__main">
+      <div class="page">
+        <section class="catalog j-catalog">
+          <div class="page__title">
+            <h1 class="heading heading--1 j-catalog__heading">Найдено 23 квартиры</h1>
+          </div>
+          <div class="page__content">
+            <div class="catalog__sorter">
+              <div class="sorter j-sorter">
+                <div class="sorter__title">Сортировать по:</div>
+                <ul class="sorter__list">
+                  <li class="sorter__item"><a class="sort-item sort-item--active sort-item--down j-sort-item" data-sort-type="price"><span class="sort-item__txt">Цене</span><span class="sort-item__shev">
+                        <svg class="sort-item__icon" width="6" height="4">
+                          <use href="static/img/icons.svg#i-shev"></use>
+                        </svg></span></a></li>
+                  <li class="sorter__item"><a class="sort-item sort-item--down j-sort-item" data-sort-type="rooms"><span class="sort-item__txt">Комнатам</span><span class="sort-item__shev">
+                        <svg class="sort-item__icon" width="6" height="4">
+                          <use href="static/img/icons.svg#i-shev"></use>
+                        </svg></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog__list j-catalog__list">
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="100" data-price="1 900 000" data-rooms="0">
+                      <button class="card__fav fav-btn fav-btn--active" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/100">
+                        <div class="card__labels">
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/1.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Студия №44</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">без
+              отделки</li>
+                            <li class="params__item"><span class="params__value">28 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">12/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">1 900 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--available" data-id="666" data-price="1 666 666" data-rooms="1">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/666">
+                        <div class="card__labels">
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/666.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Однокомнатная №666</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">базовая
+              отделка</li>
+                            <li class="params__item"><span class="params__value">66 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">6/6</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">1 666 666 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--disabled" data-id="102" data-price="5 900 000" data-rooms="2">
+                      <button class="card__fav fav-btn fav-btn--active" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/102">
+                        <div class="card__labels">
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/2.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Двухкомнатная №567</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">черновая
+              отделка</li>
+                            <li class="params__item"><span class="params__value">65 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">7/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">5 900 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="103" data-price="12 900 000" data-rooms="3">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/103">
+                        <div class="card__labels">
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/3.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Трехкомнатная №45</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">без
+              отделки</li>
+                            <li class="params__item"><span class="params__value">56 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">1/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">12 900 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="104" data-price="1 900 000" data-rooms="0">
+                      <button class="card__fav fav-btn fav-btn--active" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/104">
+                        <div class="card__labels"><span class="label label--discount">-17%</span><span class="label">Шок цена!</span>
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/4.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Студия №25</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">черновая
+              отделка</li>
+                            <li class="params__item"><span class="params__value">18 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">12/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">1 900 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="105" data-price="23 900 000" data-rooms="4">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/105">
+                        <div class="card__labels"><span class="label label--discount">-6%</span>
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/5.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Четырехкомнатная  №259</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">черновая
+              отделка</li>
+                            <li class="params__item"><span class="params__value">93 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">14/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">23 900 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--available" data-id="106" data-price="5 666 000" data-rooms="1">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/106">
+                        <div class="card__labels">
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/6.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Однокомнатная №56</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">без
+              отделки</li>
+                            <li class="params__item"><span class="params__value">36 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">3/6</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">5 666 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--available" data-id="107" data-price="5 696 664" data-rooms="3">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/107">
+                        <div class="card__labels">
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/7.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Трехкомнтаная №46</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">черновая
+              отделка</li>
+                            <li class="params__item"><span class="params__value">86 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">1/6</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">5 696 664 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="108" data-price="1 200 000" data-rooms="1">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/108">
+                        <div class="card__labels"><span class="label label--discount">-9%</span><span class="label">Шок цена!</span>
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/8.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Однокомнатная №2</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">без
+              отделки</li>
+                            <li class="params__item"><span class="params__value">18 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">3/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">1 200 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="109" data-price="1 500 500" data-rooms="0">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/109">
+                        <div class="card__labels"><span class="label label--discount">-6%</span>
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/9.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Студия №12</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">черновая
+              отделка</li>
+                            <li class="params__item"><span class="params__value">38 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">6/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">1 500 500 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="110" data-price="6 200 000" data-rooms="1">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/110">
+                        <div class="card__labels">
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/10.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Однокомнатная №8</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">черновая
+              отделка</li>
+                            <li class="params__item"><span class="params__value">48 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">3/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">6 200 000 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+              <div class="catalog__item j-catalog__item">
+                    <div class="card card--status--booked" data-id="111" data-price="5 255 006" data-rooms="2">
+                      <button class="card__fav fav-btn" type="button">
+                        <svg class="fav-btn__icon" width="19" height="18">
+                          <use href="static/img/icons.svg#i-star"></use>
+                        </svg>
+                      </button><a class="card__body" href="/flat/111">
+                        <div class="card__labels"><span class="label label--discount">-6%</span>
+                        </div>
+                        <div class="card__content">
+                          <div class="card__img">
+                            <div class="card__img-inner" style="background-image: url(static/img/flats/11.jpg)"></div>
+                          </div>
+                          <h4 class="heading card__title">Двухкомнатная №23</h4>
+                          <ul class="card__params params">
+                            <li class="params__item params__item--accent">без
+              отделки</li>
+                            <li class="params__item"><span class="params__value">48 м<sup>2</sup></span><span class="params__label">площадь</span></li>
+                            <li class="params__item"><span class="params__value">3/14</span><span class="params__label">этаж</span></li>
+                          </ul>
+                          <div class="card__price">5 255 006 руб.</div>
+                        </div>
+                        <div class="card__status btn"></div></a>
+                    </div>
+              </div>
+            </div>
+            <button class="catalog__btn j-catalog__btn btn btn--secondary" type="button">Показать еще 6</button>
+          </div>
+        </section>
+        <div class="page__action-block action-block">
+          <div class="action-block__descr">
+            <h3 class="action-block__title">Успей купить!</h3>
+            <p class="action-block__txt">Подпишись и успей словить все&nbsp;акции</p>
+          </div>
+          <form class="action-block__form">
+            <div class="action-block__field">
+              <div class="inp j-inp">
+                <input class="inp__field j-inp__field" type="text" name="email" placeholder="E-mail"/>
+              </div>
+              <label class="checkbox">
+                <input class="checkbox__inp" type="checkbox"/><span class="checkbox__label"><span class="checkbox__sign">
+                    <svg class="checkbox__icon" width="12" height="12">
+                      <use href="static/img/icons.svg#i-check"></use>
+                    </svg></span><span class="checkbox__txt">подписаться на&nbsp;новости</span></span>
+              </label>
+            </div>
+            <div class="action-block__btn">
+              <button class="btn btn--block">Подписаться</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <button class="up-btn up-btn--hidden j-up-btn" type="button">
+      <svg class="up-btn__icon" width="80" height="80">
+        <use href="static/img/icons.svg#i-up"></use>
+      </svg>
+    </button>
+    <script src="static/assets/assets.js" defer="defer"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch,Promise"></script>
+    <script src="static/js/index.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "total": 23,
+  "next": false,
+  "result": [
+    {
+      "id": 122,
+      "url": "/flat/122",
+      "status": "booked",
+      "price": 2145150,
+      "rooms": 1,
+      "labels": null,
+      "back": "static/img/flats/1.jpg",
+      "title": "Однушка с сервера №5",
+      "finish": "черновая\nотделка",
+      "area": 31,
+      "floor": "3/12",
+      "favourite": false
+    },
+    {
+      "id": 123,
+      "url": "/flat/123",
+      "status": "disabled",
+      "price": 8100500,
+      "rooms": 2,
+      "labels": null,
+      "back": "static/img/flats/3.jpg",
+      "title": "Двухкомнатная №23",
+      "finish": "без\nотделки",
+      "area": 48,
+      "floor": "10/12",
+      "favourite": false
+    },
+    {
+      "id": 124,
+      "url": "/flat/124",
+      "status": "available",
+      "price": 12700000,
+      "rooms": 3,
+      "labels": null,
+      "back": "static/img/flats/4.jpg",
+      "title": "Трехкомнтаная №461",
+      "finish": "базовая\nотделка",
+      "area": 90,
+      "floor": "3/6",
+      "favourite": false
+    },
+    {
+      "id": 132,
+      "url": "/flat/132",
+      "status": "booked",
+      "price": 4145150,
+      "rooms": 1,
+      "labels": null,
+      "back": "static/img/flats/1.jpg",
+      "title": "Однушка с сервера №678",
+      "finish": "черновая\nотделка",
+      "area": 31,
+      "floor": "3/12",
+      "favourite": false
+    },
+    {
+      "id": 125,
+      "url": "/flat/125",
+      "status": "booked",
+      "price": 2145050,
+      "rooms": 1,
+      "labels": null,
+      "back": "static/img/flats/5.jpg",
+      "title": "Однокомнатная с сервера №12",
+      "finish": "черновая\nотделка",
+      "area": 21,
+      "floor": "3/12",
+      "favourite": true
+    }
+  ]
+}
