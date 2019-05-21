@@ -1,0 +1,41 @@
+{
+  "name": "kelnik_test",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "check": "gulp build && gulp browser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ksevern/kelnik_test.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "browser-sync": "^2.26.5",
+    "del": "^4.1.1",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "promise-polyfill": "^8.1.0",
+    "whatwg-fetch": "^3.0.0"
+  }
+}
